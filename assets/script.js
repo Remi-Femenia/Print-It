@@ -23,7 +23,7 @@ let arrowRight = document.getElementById("arrowRight")
 let i = 0
 
 arrowRight.addEventListener("click", () => {
-	if (i > slides.length) {
+	if (i >= slides.length) {
 		i = 0
 	} else {
 		i++
@@ -32,7 +32,7 @@ arrowRight.addEventListener("click", () => {
 })
 
 arrowLeft.addEventListener("click", () => {
-	if (i < slides.length) {
+	if (i <= 0) {
 		i = slides.length - 1
 	} else {
 		i--
