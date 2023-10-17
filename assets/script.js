@@ -22,11 +22,20 @@ let arrowLeft = document.getElementById("arrowLeft")
 let arrowRight = document.getElementById("arrowRight")
 let i = 0
 
-arrowLeft.addEventListener("click", (event) => {
+arrowRight.addEventListener("click", (event) => {
 	if (i < 3) {
 		i++
 	} else {
 		i = 0
 	}
-	console.log(arrowLeft)
+	console.log(i)
+})
+
+arrowLeft.addEventListener("click", (event) => {
+	if (i > 0) {
+		i--
+	} else {
+		i = 3
+	}
+	console.log(i)
 })
