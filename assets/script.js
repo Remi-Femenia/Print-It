@@ -43,7 +43,7 @@ arrowLeft.addEventListener("click", () => {
 
 let nombreImagesSlide = slides.length
 
-function (createDots) 
+//function (createDots) 
 let dot = document.createElement("div")
 let dots = document.querySelector(".dots")
 dots.appendChild(dot)
