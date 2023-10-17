@@ -33,7 +33,7 @@ arrowRight.addEventListener("click", () => {
 
 arrowLeft.addEventListener("click", () => {
 	if (i < slides.length) {
-		i = 3
+		i = slides.length
 	} else {
 		i--
 	}
