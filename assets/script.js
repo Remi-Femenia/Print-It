@@ -56,6 +56,6 @@ let nombreImagesSlide = slides.length
 }*/
 
 function sliderUpdate (index) {
-	let sliderImg = document.querySelector[".banner-img"]
+	let sliderImg = document.querySelector(".banner-img")
 	sliderImg.src = pathToImage + slides[index].image
 }
