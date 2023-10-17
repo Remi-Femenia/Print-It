@@ -16,7 +16,7 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
-
+let pathToImage = "assets/images/slideshow/"
 let nombreSlides = 4
 let arrowLeft = document.getElementById("arrowLeft")
 let arrowRight = document.getElementById("arrowRight")
@@ -29,6 +29,7 @@ arrowRight.addEventListener("click", () => {
 		i++
 	}
 	console.log(i)
+	sliderUpdate(i)
 })
 
 arrowLeft.addEventListener("click", () => {
@@ -38,6 +39,7 @@ arrowLeft.addEventListener("click", () => {
 		i--
 	}
 	console.log(i)
+	sliderUpdate(i)
 })
 
 
@@ -45,10 +47,15 @@ let nombreImagesSlide = slides.length
 
 //function (createDots) 
 
-function (quantityDots) {
+/*function a (quantityDots) {
 	for (slides.length - 1) {
 		let dot = document.createElement("div")
 		let dots = document.querySelector(".dots")
 		dots.appendChild(dot)
 	}
+}*/
+
+function sliderUpdate (index) {
+	let sliderImg = document.querySelector[".banner-img"]
+	sliderImg.src = pathToImage + slides[index].image
 }
