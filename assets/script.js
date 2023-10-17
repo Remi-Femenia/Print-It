@@ -17,25 +17,25 @@ const slides = [
 	}
 ]
 
-
+let nombreSlides = 4
 let arrowLeft = document.getElementById("arrowLeft")
 let arrowRight = document.getElementById("arrowRight")
 let i = 0
 
 arrowRight.addEventListener("click", () => {
-	if (i < 3) {
-		i++
-	} else {
+	if (i > nombreSlides.length) {
 		i = 0
+	} else {
+		i++
 	}
 	console.log(i)
 })
 
 arrowLeft.addEventListener("click", () => {
-	if (i > 0) {
-		i--
-	} else {
+	if (i < nombreSlides.length) {
 		i = 3
+	} else {
+		i--
 	}
 	console.log(i)
 })
