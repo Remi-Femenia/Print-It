@@ -19,10 +19,10 @@ const slides = [
 
 
 let arrowLeft = document.getElementById("arrowLeft")
-let arrowRight = document.getElementById("arrowLeft")
+let arrowRight = document.getElementById("arrowRight")
 let i = 0
 
-arrowLeft.addEventListener("click", () => {
+arrowLeft.addEventListener("click", (event) => {
 	if (i < 3) {
 		i++
 	} else {
