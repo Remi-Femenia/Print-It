@@ -21,6 +21,7 @@ let arrowLeft = document.getElementById("arrowLeft")
 let arrowRight = document.getElementById("arrowRight")
 let i = 0
 
+//Flèche droite
 arrowRight.addEventListener("click", () => {
 	if (i >= slides.length - 1) {
 		i = 0
@@ -30,6 +31,7 @@ arrowRight.addEventListener("click", () => {
 	sliderUpdate(i)
 })
 
+//Flèche gauche
 arrowLeft.addEventListener("click", () => {
 	if (i <= 0) {
 		i = slides.length - 1
@@ -38,6 +40,15 @@ arrowLeft.addEventListener("click", () => {
 	}
 	sliderUpdate(i)
 })
+
+// Fonction mettant à jour les images du carrousel
+function sliderUpdate (index) {
+	let sliderImg = document.querySelector(".banner-img")
+	sliderImg.src = pathToImage + slides[index].image
+	
+	let sliderTxt = document.getElementById("sliderTxt")
+	sliderTxt.innerHTML = slides[index].tagLine
+}
 
 
 let nombreImagesSlide = slides.length
@@ -51,17 +62,3 @@ let nombreImagesSlide = slides.length
 		dots.appendChild(dot)
 	}
 }*/
-
-// Fonction mettant à jour les images du carrousel
-function sliderUpdate (index) {
-	let sliderImg = document.querySelector(".banner-img")
-	sliderImg.src = pathToImage + slides[index].image
-	
-	let sliderTxt = document.getElementById("sliderTxt")
-	sliderTxt.innerHTML = slides[index].tagLine
-
-
-	/*let sliderTextBottom = document.querySelector("#sliderText span")*/
-
-	console.log(sliderTxt)
-}
