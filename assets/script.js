@@ -52,11 +52,15 @@ let nombreImagesSlide = slides.length
 	}
 }*/
 
+// Fonction mettant à jour les images du carroussel
 function sliderUpdate (index) {
 	let sliderImg = document.querySelector(".banner-img")
 	sliderImg.src = pathToImage + slides[index].image
-	let sliderTxt = document.getElementById("textSlide")
+	
+	let sliderTxt = document.getElementById("sliderTxt")
 	sliderTxt.textContent = slides[index].tagLine
+
+	/*let sliderTextBottom = document.querySelector("#sliderText span")*/
 
 	console.log(sliderTxt)
 }
