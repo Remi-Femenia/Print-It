@@ -17,7 +17,6 @@ const slides = [
 	}
 ]
 let pathToImage = "assets/images/slideshow/"
-let nombreSlides = 4
 let arrowLeft = document.getElementById("arrowLeft")
 let arrowRight = document.getElementById("arrowRight")
 let i = 0
@@ -28,7 +27,6 @@ arrowRight.addEventListener("click", () => {
 	} else {
 		i++
 	}
-	console.log(i)
 	sliderUpdate(i)
 })
 
@@ -38,7 +36,6 @@ arrowLeft.addEventListener("click", () => {
 	} else {
 		i--
 	}
-	console.log(i)
 	sliderUpdate(i)
 })
 
@@ -58,4 +55,8 @@ let nombreImagesSlide = slides.length
 function sliderUpdate (index) {
 	let sliderImg = document.querySelector(".banner-img")
 	sliderImg.src = pathToImage + slides[index].image
+	let sliderTxt = document.getElementById("textSlide")
+	sliderTxt = slides[index].tagLine
+	
+	console.log(sliderTxt)
 }
