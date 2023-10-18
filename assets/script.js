@@ -56,7 +56,7 @@ function sliderUpdate (index) {
 	let sliderImg = document.querySelector(".banner-img")
 	sliderImg.src = pathToImage + slides[index].image
 	let sliderTxt = document.getElementById("textSlide")
-	sliderTxt = slides[index].tagLine
-	
+	sliderTxt.textContent = slides[index].tagLine
+
 	console.log(sliderTxt)
 }
