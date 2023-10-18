@@ -52,7 +52,7 @@ let nombreImagesSlide = slides.length
 	}
 }*/
 
-// Fonction mettant à jour les images du carroussel
+// Fonction mettant à jour les images du carrousel
 function sliderUpdate (index) {
 	let sliderImg = document.querySelector(".banner-img")
 	sliderImg.src = pathToImage + slides[index].image
