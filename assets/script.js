@@ -58,7 +58,8 @@ function sliderUpdate (index) {
 	sliderImg.src = pathToImage + slides[index].image
 	
 	let sliderTxt = document.getElementById("sliderTxt")
-	sliderTxt.textContent = slides[index].tagLine
+	sliderTxt.innerHTML = slides[index].tagLine
+
 
 	/*let sliderTextBottom = document.querySelector("#sliderText span")*/
 
