@@ -58,7 +58,7 @@ let dot = document.createElement("div")
 let dots = document.querySelector(".dots")
 
 //Fonction de création des points du carrousel 
-function createDots(dots, dot) {
+function createDots(slides, dots, dot) {
 
 	for (let quantityDots = 0; quantityDots <= slides.length - 1; quantityDots++) {
 		dots.appendChild(dot).classList.add("dot");
