@@ -42,7 +42,7 @@ arrowLeft.addEventListener("click", () => {
 	sliderUpdate(i)
 })
 
-// Fonction mettant à jour les images du carrousel
+// Fonction mettant à jour les images et le texte du carrousel
 function sliderUpdate (index) {
 	let sliderImg = document.querySelector(".banner-img")
 	sliderImg.src = pathToImage + slides[index].image
@@ -54,15 +54,15 @@ function sliderUpdate (index) {
 
 // Points du carrousel
 
+let dot = document.createElement("div")
+let dots = document.querySelector(".dots")
+let quantityDots = 0
 
 //Fonction de création des points du carrousel 
-function createDots (slides, dots, dot) {
-	for (i = 0; i <= slides.length - 1; i++) {
-		let dot = document.createElement("div")
-		let dots = document.querySelector(".dots")
+function createDots (dots, dot) {
+	for (quantityDots = 0; quantityDots <= slides.length - 1; quantityDots++) {
 		dots.appendChild(dot).classList.add("dot")
-		break
 	}
 }
 
-console.log(createDots)
+console.log(quantityDots)
