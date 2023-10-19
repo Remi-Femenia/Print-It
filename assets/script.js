@@ -56,13 +56,15 @@ function sliderUpdate (index) {
 
 let dot = document.createElement("div")
 let dots = document.querySelector(".dots")
-let quantityDots = 0
 
 //Fonction de création des points du carrousel 
-function createDots (dots, dot) {
-	for (quantityDots = 0; quantityDots <= slides.length - 1; quantityDots++) {
-		dots.appendChild(dot).classList.add("dot")
+function createDots(dots, dot) {
+
+	for (let quantityDots = 0; quantityDots <= slides.length - 1; quantityDots++) {
+		dots.appendChild(dot).classList.add("dot");
 	}
+	return dot
 }
 
-console.log(quantityDots)
+console.log(createDots)
+
