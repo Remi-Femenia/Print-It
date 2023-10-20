@@ -70,3 +70,11 @@ createDots(4,4,4)
 
 console.log(createDots)
 
+// Fonction pour changer l'apparence du dot sélectionné
+function changeSelectedDot (dot) {
+    if (dot = active) {
+        dot.classList.remove("dot")
+        dot.classList.add("dot_selected")
+    }
+    return dot
+}
