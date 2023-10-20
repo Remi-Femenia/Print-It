@@ -66,5 +66,7 @@ function createDots(slides, dots, dot) {
 	return dot
 }
 
+createDots(4,4,4)
+
 console.log(createDots)
 
