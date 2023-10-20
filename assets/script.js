@@ -78,3 +78,5 @@ function changeSelectedDot (dot) {
     }
     return dot
 }
+
+changeSelectedDot(1)
