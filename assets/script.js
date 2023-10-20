@@ -68,7 +68,7 @@ function createDots(quantityDots) {
 	console.log(quantityDots)
 }
 
-let totalDots = createDots(quantityDots)
+let totalDots = createDots(dot)
 
 
 // Fonction pour relier les dots aux slides
