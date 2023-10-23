@@ -54,21 +54,18 @@ function sliderUpdate (index) {
 
 // Points du carrousel
 
-let dot = document.createElement("div")
 let dots = document.querySelector(".dots")
-let quantityDots = 0
 
 //Fonction de création des points du carrousel 
-function createDots(quantityDots) {
-
+function createDots() {
 	for (let quantityDots = 0; quantityDots <= slides.length - 1; quantityDots++) {
+		let dot = document.createElement("div");
 		dots.appendChild(dot).classList.add("dot");
+		console.log(dot)
 	}
-	return dot;
-	console.log(quantityDots)
 }
 
-let totalDots = createDots(dot)
+createDots()
 
 
 // Fonction pour relier les dots aux slides
@@ -80,10 +77,9 @@ function linkDotsToSlides () {
 
 // Fonction pour changer l'apparence du dot sélectionné
 function changeSelectedDot (dot) {
-    if (dot = dot.active) {
+    if (dot = active) {
         dot.classList.add("dot_selected")
     }
-    return dot
 }
 
-changeSelectedDot(1)
+changeSelectedDot()
