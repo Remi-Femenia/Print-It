@@ -67,18 +67,25 @@ function createDots() {
 }
 createDots()
 
-let numberDots = quantityDots.value
+let numberDots = quantityDots.lenght
 
 
 
 // Fonction pour relier les dots aux slides
 function dotsUpdate (index) {
+	
 	let dot = document.querySelector(".dot");
 	let numberDots = dot(index)
 
-	if (numberDots(index) === i) {
-		dot.classList.add("dot_selected");
+	for (i = 0; i <= slides.length - 1; i++) {
+		if (dotNumber === sliderUpdate(i)) {
+			dot.classList.add("dot_selected")
+
+		}
+
+
 	}
+
 }
 
 // Fonction pour changer l'apparence du dot sélectionné
