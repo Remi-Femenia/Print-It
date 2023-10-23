@@ -30,6 +30,7 @@ arrowRight.addEventListener("click", () => {
 		i++
 	}
 	sliderUpdate(i)
+	dotsUpdate(i)
 })
 
 //Flèche gauche
@@ -40,15 +41,16 @@ arrowLeft.addEventListener("click", () => {
 		i--
 	}
 	sliderUpdate(i)
+	dotsUpdate(i)
 })
 
 // Fonction mettant à jour les images et le texte du carrousel
 function sliderUpdate (index) {
-	let sliderImg = document.querySelector(".banner-img")
-	sliderImg.src = pathToImage + slides[index].image
+	let sliderImg = document.querySelector(".banner-img");
+	sliderImg.src = pathToImage + slides[index].image;
 	
-	let sliderTxt = document.getElementById("sliderTxt")
-	sliderTxt.innerHTML = slides[index].tagLine
+	let sliderTxt = document.getElementById("sliderTxt");
+	sliderTxt.innerHTML = slides[index].tagLine;
 }
 
 
@@ -61,25 +63,28 @@ function createDots() {
 	for (let quantityDots = 0; quantityDots <= slides.length - 1; quantityDots++) {
 		let dot = document.createElement("div");
 		dots.appendChild(dot).classList.add("dot");
-		console.log(dot)
 	}
 }
-
 createDots()
+
+let numberDots = quantityDots.value
+
 
 
 // Fonction pour relier les dots aux slides
-function linkDotsToSlides () {
-	
+function dotsUpdate (index) {
+	let dot = document.querySelector(".dot");
+	let numberDots = dot(index)
 
-
+	if (numberDots(index) === i) {
+		dot.classList.add("dot_selected");
+	}
 }
 
 // Fonction pour changer l'apparence du dot sélectionné
-function changeSelectedDot (dot) {
-    if (dot = active) {
-        dot.classList.add("dot_selected")
+function changeSelectedDot () {
+    if (dot = 0) {
+        dot.classList.add("dot_selected");
     }
 }
-
 changeSelectedDot()
