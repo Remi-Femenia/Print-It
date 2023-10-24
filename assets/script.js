@@ -67,31 +67,17 @@ function createDots() {
 }
 createDots()
 
-let numberDots = quantityDots.lenght
 
 
-
-// Fonction pour relier les dots aux slides
+// Fonction permettant de mettre en surbrillance le point sélectionné
 function dotsUpdate (index) {
-	
-	let dot = document.querySelector(".dot");
-	let numberDots = dot(index)
+	let dot = document.querySelectorAll(".dot");
 
-	for (i = 0; i <= slides.length - 1; i++) {
-		if (dotNumber === sliderUpdate(i)) {
-			dot.classList.add("dot_selected")
-
-		}
-
-
+	for (let compteur = 0; compteur < dot.length; compteur++) {
+		dot[compteur].classList.remove("dot_selected")
 	}
+	
+	dot[index].classList.add("dot_selected")
 
 }
-
-// Fonction pour changer l'apparence du dot sélectionné
-function changeSelectedDot () {
-    if (dot = 0) {
-        dot.classList.add("dot_selected");
-    }
-}
-changeSelectedDot()
+dotsUpdate(0)
