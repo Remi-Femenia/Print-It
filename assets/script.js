@@ -69,15 +69,14 @@ createDots()
 
 
 
-// Fonction permettant de mettre en surbrillance le point sélectionné
+// Fonction permettant de modifier l'apparence du point sélectionné
 function dotsUpdate (index) {
 	let dot = document.querySelectorAll(".dot");
 
 	for (let compteur = 0; compteur < dot.length; compteur++) {
 		dot[compteur].classList.remove("dot_selected")
 	}
-	
-	dot[index].classList.add("dot_selected")
 
+	dot[index].classList.add("dot_selected")
 }
 dotsUpdate(0)
